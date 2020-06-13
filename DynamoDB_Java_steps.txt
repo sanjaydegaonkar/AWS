@@ -1,21 +1,17 @@
 ***Dynamodb and java demo***
 ----------------------------
 
-to install gradle on ec2
-------------------------
-
-Step 1: Step 1. Download and Install Gradle.
--------------------------------------------
-
+Download and Install Gradle.
+----------------------------
 cd /opt
 
 wget https://services.gradle.org/distributions/gradle-3.1-bin.zip
- unzip gradle-3.1-bin.zip
+unzip gradle-3.1-bin.zip
 ln -s gradle-3.1 gradle
 
-Step 2. Set Gradle Environment Value.
--------------------------------------
- vim /etc/profile.d/gradle-env.sh
+Set Gradle Environment Value
+----------------------------
+vim /etc/profile.d/gradle-env.sh
 
 export GRADLE_HOME=/opt/gradle
 export PATH=$PATH:$GRADLE_HOME/bin
@@ -26,12 +22,19 @@ cd /home
 cd ec2-user/
 source /etc/profile.d/gradle-env.sh
 
+Git installation 
+----------------
+yum install git -y
 
-
+Download project from Git Repo
+------------------------------
 git init 
 
 git pull https://github.com/sanjaydegaonkar/AWS.git
 
+
+Configure AWS to pass access key
+--------------------------------
 aws configure
 
 IAM 
@@ -40,6 +43,8 @@ security credentials - create access key - download csv file.
 
 copy key & value
 
+Execute Project
+---------------
 cd DynamoDB_Java_Project/
 
 gradle build
@@ -49,4 +54,7 @@ gradle run
 To view DynamoDB records
 ------------------------
 services - dynamodb 
-Tables - select table say ProductCatalog - then items tab  to view the records
+Tables - select table ProductCatalog - then items tab  to view the records
+
+
+**Congratulation - You have that skill which required for Developer role i.e. copy & paste !! **
