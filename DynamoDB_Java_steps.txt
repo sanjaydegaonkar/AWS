@@ -1,6 +1,11 @@
 ***Dynamodb and java demo***
 ----------------------------
 
+Install Java
+------------
+yum install java-1.8.0-openjdk-devel -y
+
+
 Download and Install Gradle.
 ----------------------------
 cd /opt
